@@ -23,23 +23,23 @@ const greeting = {
   username: "Ahammed Yaseen",
   title: "Hi all, I'm Yaseen",
   subTitle: emoji(
-    "A passionate Full Stack Software Developer 🚀 having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / React Native and some other cool libraries and frameworks."
+    "I’m a Full Stack .NET Developer 🚀 with over 10 years of experience in building powerful, scalable, and user-friendly web, desktop, and mobile applications. I specialize in ASP.NET MVC, .NET Core, Web API, Xamarin, React, and React Native, with strong expertise in MS SQL Server and Oracle databases."
   ),
   resumeLink:
-    "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the button
+    "https://docs.google.com/document/d/13EZrTa8ZKXCRNwIIELisPSBBW_0oj6PI/edit?usp=drive_link&ouid=108391050748747786709&rtpof=true&sd=true", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
 // Social Media Links
 
 const socialMediaLinks = {
-  github: "https://github.com/saadpasta",
-  linkedin: "https://www.linkedin.com/in/saadpasta/",
-  gmail: "saadpasta70@gmail.com",
-  gitlab: "https://gitlab.com/saadpasta",
-  facebook: "https://www.facebook.com/saad.pasta7",
-  medium: "https://medium.com/@saadpasta",
-  stackoverflow: "https://stackoverflow.com/users/10422806/saad-pasta",
+  github: "https://github.com/yazcity",
+  linkedin: "https://www.linkedin.com/in/ahammed-yaseen-968788111/",
+  gmail: "yazcity@gmail.com",
+  gitlab: "https://gitlab.com/yazcity",
+  facebook: "https://www.facebook.com/yasin.vk",
+  medium: "https://medium.com/@yazcity",
+  stackoverflow: "https://stackoverflow.com/users/31650770",
   // Instagram, Twitter and Kaggle are also supported in the links!
   // To customize icons and social links, tweak src/components/SocialMedia
   display: true // Set true to display this section, defaults to false
@@ -49,75 +49,159 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "What I do",
-  subTitle: "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+  subTitle: "TECH EXPLORER & FEARLESS FULL-STACK DEVELOPER MASTERING EVERY STACK",
   skills: [
     emoji(
       "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications"
     ),
-    emoji("⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"),
+    emoji("⚡ Design and develop robust, scalable back-end architectures using .NET Framework, .NET Core, and .NET 8, with secure and optimized RESTful APIs"),
     emoji(
-      "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
+      "⚡ Build and integrate enterprise-grade databases using MS SQL Server and Oracle, ensuring performance, reliability, and data integrity"
     )
   ],
 
   /* Make Sure to include correct Font Awesome Classname to view your icon
 https://fontawesome.com/icons?d=gallery */
 
+  // softwareSkills: [
+  //   {
+  //     skillName: "html-5",
+  //     fontAwesomeClassname: "fab fa-html5"
+  //   },
+  //   {
+  //     skillName: "css3",
+  //     fontAwesomeClassname: "fab fa-css3-alt"
+  //   },
+  //   {
+  //     skillName: "sass",
+  //     fontAwesomeClassname: "fab fa-sass"
+  //   },
+  //   {
+  //     skillName: "JavaScript",
+  //     fontAwesomeClassname: "fab fa-js"
+  //   },
+  //   {
+  //     skillName: "reactjs",
+  //     fontAwesomeClassname: "fab fa-react"
+  //   },
+  //   {
+  //     skillName: "nodejs",
+  //     fontAwesomeClassname: "fab fa-node"
+  //   },
+  //   {
+  //     skillName: "swift",
+  //     fontAwesomeClassname: "fab fa-swift"
+  //   },
+  //   {
+  //     skillName: "npm",
+  //     fontAwesomeClassname: "fab fa-npm"
+  //   },
+  //   {
+  //     skillName: "sql-database",
+  //     fontAwesomeClassname: "fas fa-database"
+  //   },
+  //   {
+  //     skillName: "aws",
+  //     fontAwesomeClassname: "fab fa-aws"
+  //   },
+  //   {
+  //     skillName: "firebase",
+  //     fontAwesomeClassname: "fas fa-fire"
+  //   },
+  //   {
+  //     skillName: "python",
+  //     fontAwesomeClassname: "fab fa-python"
+  //   },
+  //   {
+  //     skillName: "docker",
+  //     fontAwesomeClassname: "fab fa-docker"
+  //   }
+  // ],
+  // display: true 
+
   softwareSkills: [
-    {
-      skillName: "html-5",
-      fontAwesomeClassname: "fab fa-html5"
-    },
-    {
-      skillName: "css3",
-      fontAwesomeClassname: "fab fa-css3-alt"
-    },
-    {
-      skillName: "sass",
-      fontAwesomeClassname: "fab fa-sass"
-    },
-    {
-      skillName: "JavaScript",
-      fontAwesomeClassname: "fab fa-js"
-    },
-    {
-      skillName: "reactjs",
-      fontAwesomeClassname: "fab fa-react"
-    },
-    {
-      skillName: "nodejs",
-      fontAwesomeClassname: "fab fa-node"
-    },
-    {
-      skillName: "swift",
-      fontAwesomeClassname: "fab fa-swift"
-    },
-    {
-      skillName: "npm",
-      fontAwesomeClassname: "fab fa-npm"
-    },
-    {
-      skillName: "sql-database",
-      fontAwesomeClassname: "fas fa-database"
-    },
-    {
-      skillName: "aws",
-      fontAwesomeClassname: "fab fa-aws"
-    },
-    {
-      skillName: "firebase",
-      fontAwesomeClassname: "fas fa-fire"
-    },
-    {
-      skillName: "python",
-      fontAwesomeClassname: "fab fa-python"
-    },
-    {
-      skillName: "docker",
-      fontAwesomeClassname: "fab fa-docker"
-    }
-  ],
-  display: true // Set false to hide this section, defaults to true
+  {
+    skillName: ".NET",
+    fontAwesomeClassname: "fas fa-code" // No official .NET icon
+  },
+  {
+  skillName: "API",
+  fontAwesomeClassname: "fas fa-plug"
+  },
+  {
+    skillName: "HTML5",
+    fontAwesomeClassname: "fab fa-html5"
+  },
+  {
+    skillName: "CSS3",
+    fontAwesomeClassname: "fab fa-css3-alt"
+  },
+  {
+    skillName: "Bootstrap",
+    fontAwesomeClassname: "fab fa-bootstrap"
+  },
+  {
+    skillName: "Material UI",
+    fontAwesomeClassname: "fas fa-layer-group" // Close alternative
+  },
+  {
+    skillName: "Sass",
+    fontAwesomeClassname: "fab fa-sass"
+  },
+  {
+    skillName: "JavaScript",
+    fontAwesomeClassname: "fab fa-js"
+  },
+  {
+    skillName: "React",
+    fontAwesomeClassname: "fab fa-react"
+  },
+  {
+    skillName: "Node.js",
+    fontAwesomeClassname: "fab fa-node-js"
+  },
+  {
+  skillName: "Xamarin",
+  fontAwesomeClassname: "fas fa-mobile-alt" 
+  },
+  {
+    skillName: "React Native",
+    fontAwesomeClassname: "fab fa-react"
+  },
+  {
+    skillName: "Three.js",
+    // Option 1: using placeholder icon
+    fontAwesomeClassname: "fas fa-cube"
+  },
+
+  {
+    skillName: "npm",
+    fontAwesomeClassname: "fab fa-npm"
+  },
+  {
+    skillName: "SQL Database",
+    fontAwesomeClassname: "fas fa-database"
+  },
+  {
+    skillName: "Oracle Database",
+    fontAwesomeClassname: "fas fa-database"
+  },
+  {
+    skillName: "AWS",
+    fontAwesomeClassname: "fab fa-aws"
+  },
+  {
+    skillName: "Azure",
+    fontAwesomeClassname: "fas fa-cloud" // No official Azure icon in FA
+  },
+  {
+    skillName: "Docker",
+    fontAwesomeClassname: "fab fa-docker"
+  }
+],
+display: true
+
+
 };
 
 // Education Section
@@ -126,23 +210,26 @@ const educationInfo = {
   display: true, // Set false to hide this section, defaults to true
   schools: [
     {
-      schoolName: "Harvard University",
-      logo: require("./assets/images/harvardLogo.png"),
-      subHeader: "Master of Science in Computer Science",
-      duration: "September 2017 - April 2019",
-      desc: "Participated in the research of XXX and published 3 papers.",
+      schoolName: "Anna University",
+      logo: require("./assets/images/anna.png"),
+      subHeader: "Bachelor of Engineering in Computer Science",
+      duration: "Jun 2018 - March 2012",
+      // desc: "Participated in the research of XXX and published 3 papers.",
       descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        "Gained a strong foundation in computer science concepts including algorithms, data structures, and software engineering principlesGained a strong foundation in computer science concepts including algorithms, data structures, and software engineering principles.",
+        "Completed a mini project on an Automatic Crowd-Based Light and Fan Control System using the 8051 Microcontroller.",
+        "Completed a major project on Cloud Computing Simulation and developed an E-Commerce Web Application using ASP.NET Web Forms and SQL Server."
       ]
     },
     {
-      schoolName: "Stanford University",
-      logo: require("./assets/images/stanfordLogo.png"),
-      subHeader: "Bachelor of Science in Computer Science",
-      duration: "September 2013 - April 2017",
-      desc: "Ranked top 10% in the program. Took courses about Software Engineering, Web Security, Operating Systems, ...",
-      descBullets: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit"]
+      schoolName: "Government Higher Secondary School.",
+      logo: require("./assets/images/KHSEB.webp"),
+      subHeader: "Biology Science",
+      duration: "June 2005 - March 2007",
+      desc: "Completed Higher Secondary education in Biology Science with 80% marks. Developed strong analytical and problem-solving skills that later fueled my passion for technology and software development.",
+      descBullets: ["Built a solid foundation in scientific reasoning and logical thinking",
+        "Learned the importance of precision, observation, and analytical approach—skills I now apply in software development"
+      ]
     }
   ]
 };
@@ -152,19 +239,23 @@ const educationInfo = {
 const techStack = {
   viewSkillBars: true, //Set it to true to show Proficiency Section
   experience: [
-    {
-      Stack: "Frontend/Design", //Insert stack or technology you have experience in
-      progressPercentage: "90%" //Insert relative proficiency in percentage
-    },
-    {
-      Stack: "Backend",
-      progressPercentage: "70%"
-    },
-    {
-      Stack: "Programming",
-      progressPercentage: "60%"
-    }
-  ],
+  {
+    Stack: "Frontend / UI Development",
+    progressPercentage: "70%"
+  },
+  {
+    Stack: "Backend / API Development",
+    progressPercentage: "90%"
+  },
+  {
+    Stack: "Database & Server Management",
+    progressPercentage: "85%"
+  },
+  {
+    Stack: "Programming & Problem Solving",
+    progressPercentage: "88%"
+  }
+],
   displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
 };
 
@@ -172,33 +263,75 @@ const techStack = {
 
 const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
+  // experience: [
+  //   {
+  //     role: "Software Engineer",
+  //     company: "City University Ajman",
+  //     companylogo: require("./assets/images/facebookLogo.png"),
+  //     date: "June 2020 – Present",
+  //     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  //     descBullets: [
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+  //     ]
+  //   },
+  //   {
+  //     role: "Senior Application Web Developer",
+  //     company: "Ali Mousa Holding",
+  //     companylogo: require("./assets/images/quoraLogo.png"),
+  //     date: "Sep 2019 – Sep 2020",
+  //     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  //   },
+  //   {
+  //     role: ".Net Developer",
+  //     company: "Canada Hitech",
+  //     companylogo: require("./assets/images/airbnbLogo.png"),
+  //     date: "Jan 2018 – Jun 2019",
+  //     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  //   }
+  // ]
   experience: [
-    {
-      role: "Software Engineer",
-      company: "Facebook",
-      companylogo: require("./assets/images/facebookLogo.png"),
-      date: "June 2018 – Present",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-      ]
-    },
-    {
-      role: "Front-End Developer",
-      company: "Quora",
-      companylogo: require("./assets/images/quoraLogo.png"),
-      date: "May 2017 – May 2018",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    },
-    {
-      role: "Software Engineer Intern",
-      company: "Airbnb",
-      companylogo: require("./assets/images/airbnbLogo.png"),
-      date: "Jan 2015 – Sep 2015",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    }
-  ]
+  {
+    role: "Senior Software Engineer",
+    company: "City University Ajman",
+    companylogo: require("./assets/images/cuca.png"),
+    date: "Sep 2020 – Present",
+    desc: "Leading the design and development of enterprise-level web and mobile solutions using .NET 8 MVC, Web API, and Xamarin. Involved in the full software development lifecycle, from requirement gathering to deployment.",
+    descBullets: [
+      "Architected and developed university management modules including Lead Management, Task Management, Employee Appraisal, Tactical Operational Plan (TOPS), and Risk Register.",
+      "Developed RESTful APIs and optimized SQL Server queries and stored procedures for high performance.",
+      "Created responsive front-end interfaces using React and Bootstrap, and mobile apps using Xamarin.",
+      "Implemented Windows Services for automated tasks and scheduled operations."
+    ]
+  },
+  {
+    role: "Senior Application Web Developer",
+    company: "Ali Mousa Holding",
+    companylogo: require("./assets/images/ali.png"),
+    date: "Sep 2019 – Sep 2020",
+    desc: "Designed and developed enterprise applications for multiple subsidiaries across UAE in real estate, construction, and manufacturing sectors. Provided technical support for over 400 corporate users.",
+    descBullets: [
+      "Built and maintained ASP.NET MVC and Web API applications for Attendance, BOQ Costing, Asset Management, HR, Payroll, and Finance modules.",
+      "Managed Oracle and SQL Server databases and created reports using Oracle APEX and SSRS.",
+      "Provided technical support and resolved issues via ManageEngine Service Desk.",
+      "Led a team of developers and contributed to migrating legacy applications to .NET Core."
+    ]
+  },
+  {
+    role: ".NET Developer",
+    company: "Canada Hitech",
+    companylogo: require("./assets/images/canada.png"),
+    date: "Jan 2018 – Jun 2019",
+    desc: "Developed web-based and desktop applications using ASP.NET MVC, C#, and SQL Server. Focused on backend logic, database design, and system integration for government and enterprise clients.",
+    descBullets: [
+      "Designed and maintained SOAP and RESTful APIs for Advertising, Inspection, Customer Happiness, and Insurance applications.",
+      "Created SQL Server stored procedures, views, and optimized database performance.",
+      "Integrated third-party libraries and payment gateways for enhanced functionality.",
+      "Collaborated with UI teams to deliver responsive and user-friendly interfaces."
+    ]
+  }
+]
+
 };
 
 /* Your Open Source Section to View Your Github Pinned Projects
@@ -212,32 +345,44 @@ const openSource = {
 // Some big projects you have worked on
 
 const bigProjects = {
-  title: "Big Projects",
-  subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
+  title: "Ongoing Enterprise Projects",
+  subtitle: "Enterprise-level projects developed for my current organization, focused on automation, efficiency, and scalability.",
   projects: [
     {
-      image: require("./assets/images/saayaHealthLogo.webp"),
-      projectName: "Saayahealth",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      image: require("./assets/images/cuums.png"),
+      projectName: "University Management System",
+      projectDesc: "A comprehensive University Management System designed to streamline campus operations with modules for task management, meeting minutes, HR appraisals, tactical and operational planning, internships, events, surveys, benchmarking, and crowd control — enabling smarter coordination, transparency, and efficiency across departments.",
       footerLink: [
         {
           name: "Visit Website",
-          url: "http://saayahealth.com/"
+          url: "http://city-university.fortiddns.com:7414/UMS/"
         }
         //  you can add extra buttons here.
       ]
     },
     {
-      image: require("./assets/images/nextuLogo.webp"),
-      projectName: "Nextu",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      image: require("./assets/images/cutipam.png"),
+      projectName: "TIPAM",
+      projectDesc: "An advanced Academic Management Platform (TIPAM) designed to automate and enhance university academic processes. It covers modules such as course syllabus management, moderation, exams, course delivery planning, CLO–PLO mapping, course and program revision, critical self-evaluation, research and development tracking, faculty CV management, grading, PDP, and CSR activities — providing a unified solution for academic quality assurance and continuous improvement.",
       footerLink: [
         {
           name: "Visit Website",
-          url: "http://nextu.se/"
+          url: "http://city-university.fortiddns.com:7414/TIPAM/"
         }
       ]
-    }
+    },
+     {
+      image: require("./assets/images/culms.png"),
+      projectName: "LMS",
+      projectDesc: "A smart Lead Management System built for universities to efficiently handle student inquiries and admissions. It enables lead entry, follow-ups, multi-user access for agents and team leads, categorized folders, detailed follow-up tracking, and automated notifications. Designed to improve communication, conversion tracking, and overall lead management efficiency through a structured and collaborative workflow.",
+      footerLink: [
+        {
+          name: "Visit Website",
+          url: "http://city-university.fortiddns.com:7414/LMS/"
+        }
+      ]
+    },
+    
   ],
   display: true // Set false to hide this section, defaults to true
 };
@@ -245,63 +390,222 @@ const bigProjects = {
 // Achievement Section
 // Include certificates, talks etc
 
+// const achievementSection = {
+//   title: emoji("Achievements And Certifications 🏆 "),
+//   subtitle:
+//     "Achievements, Certifications, Award Letters and Some Cool Stuff that I have done !",
+
+//   achievementsCards: [
+//     {
+//       title: "Microsoft Azure Fundamentals (AZ-900)",
+//       subtitle:
+//         "Validated foundational knowledge of Microsoft Azure cloud concepts, services, and best practices—aligning with modern enterprise cloud adoption and DevOps integration..",
+//       image: require("./assets/images/Microsoft-Azure.jpg"),
+//       imageAlt: "Microsoft Azure Fundamentals Logo",
+//       footerLink: [
+//         {
+//           name: "Certification",
+//           url: "https://drive.google.com/file/d/0B7kazrtMwm5dYkVvNjdNWjNybWJrbndFSHpNY2NFV1p4YmU0/view?usp=sharing"
+//         },
+//         {
+//           name: "Award Letter",
+//           url: "https://drive.google.com/file/d/0B7kazrtMwm5dekxBTW5hQkg2WXUyR3QzQmR0VERiLXlGRVdF/view?usp=sharing"
+//         },
+//         {
+//           name: "Google Code-in Blog",
+//           url: "https://opensource.googleblog.com/2019/01/google-code-in-2018-winners.html"
+//         }
+//       ]
+//     },
+//     {
+//       title: "ASP.NET Core Identity & Authentication Management",
+//       subtitle:
+//         "Mastered secure user authentication, authorization, and role-based access control in ASP.NET Core, focusing on scalable and secure application development.",
+//       image: require("./assets/images/AuthenticationManagement.jpg"),
+//       imageAlt: "AuthenticationManagement Logo",
+//       footerLink: [
+//         {
+//           name: "View Google Assistant Action",
+//           url: "https://assistant.google.com/services/a/uid/000000100ee688ee?hl=en"
+//         }
+//       ]
+//     },
+
+//     {
+//       title: "Project Management",
+//       subtitle: "Learned practical methodologies for initiating, planning, and executing projects efficiently with clear goals, milestones, and resource optimization.",
+//       image: require("./assets/images/Project-Management.jpg"),
+//       imageAlt: "Project Management Logo",
+//       footerLink: [
+//         {name: "Certification", url: ""},
+//         {
+//           name: "Final Project",
+//           url: "https://pakistan-olx-1.firebaseapp.com/"
+//         }
+//       ]
+//     },
+//      {
+//       title: "Problem Solving Tools and Techniques",
+//       subtitle: "Enhanced analytical and critical thinking capabilities through proven tools and methods to identify root causes and drive data-informed decisions.",
+//       image: require("./assets/images/Problem-Solving.jpg"),
+//       imageAlt: "Problem Solving Tools and Techniques Logo",
+//       footerLink: [
+//         {name: "Certification", url: ""},
+//         {
+//           name: "Final Project",
+//           url: "https://pakistan-olx-1.firebaseapp.com/"
+//         }
+//       ]
+//     },
+//     {
+//       title: "Leadership: Theory and Practice",
+//       subtitle: "Gained insights into leadership principles, team motivation, and strategic decision-making to manage cross-functional teams effectively.",
+//       image: require("./assets/images/Leadership.jpg"),
+//       imageAlt: "Leadership: Theory and Practice Logo",
+//       footerLink: [
+//         {name: "Certification", url: ""},
+//         {
+//           name: "Final Project",
+//           url: "https://pakistan-olx-1.firebaseapp.com/"
+//         }
+//       ]
+//     },
+//     {
+//       title: "Managing Online Meetings",
+//       subtitle: "Developed skills to plan, facilitate, and lead engaging and result-driven virtual meetings in hybrid and remote work environments.",
+//       image: require("./assets/images/Managing-Online.jpg"),
+//       imageAlt: "Managing Online Meetings Logo",
+//       footerLink: [
+//         {name: "Certification", url: ""},
+//         {
+//           name: "Final Project",
+//           url: "https://pakistan-olx-1.firebaseapp.com/"
+//         }
+//       ]
+//     },
+//      {
+//       title: "Course Planning",
+//       subtitle: "Applied structured approaches to design and manage course content and educational programs for effective learning outcomes.",
+//       image: require("./assets/images/Course-planning.jpg"),
+//       imageAlt: "MCourse Planning Logo",
+//       footerLink: [
+//         {name: "Certification", url: ""},
+//         {
+//           name: "Final Project",
+//           url: "https://pakistan-olx-1.firebaseapp.com/"
+//         }
+//       ]
+//     },
+//     {
+//       title: "Best Employee of the Month",
+//       subtitle: "Recognized as the only recipient from the IT Department for exceptional technical excellence, innovation, and dedication to organizational success.",
+//       image: require("./assets/images/appreciation-1.jpg"),
+//       imageAlt: "Best Employee of the Month Logo",
+//       footerLink: [
+//         {name: "Certification", url: ""},
+//         {
+//           name: "Final Project",
+//           url: "https://pakistan-olx-1.firebaseapp.com/"
+//         }
+//       ]
+//     }
+//   ],
+//   display: true // Set false to hide this section, defaults to true
+// };
+
 const achievementSection = {
-  title: emoji("Achievements And Certifications 🏆 "),
+  title: emoji("Achievements & Certifications 🏆"),
   subtitle:
-    "Achievements, Certifications, Award Letters and Some Cool Stuff that I have done !",
+    "Recognitions, certifications, and milestones that reflect my professional growth and commitment to excellence.",
 
   achievementsCards: [
     {
-      title: "Google Code-In Finalist",
+      title: "Microsoft Azure Fundamentals (AZ-900)",
       subtitle:
-        "First Pakistani to be selected as Google Code-in Finalist from 4000 students from 77 different countries.",
-      image: require("./assets/images/codeInLogo.webp"),
-      imageAlt: "Google Code-In Logo",
+        "Certified in core Azure cloud concepts, services, and DevOps fundamentals, aligning with modern enterprise solutions.",
+      image: require("./assets/images/Microsoft-Azure.jpg"),
+      imageAlt: "Microsoft Azure Fundamentals Logo",
       footerLink: [
         {
           name: "Certification",
           url: "https://drive.google.com/file/d/0B7kazrtMwm5dYkVvNjdNWjNybWJrbndFSHpNY2NFV1p4YmU0/view?usp=sharing"
-        },
-        {
-          name: "Award Letter",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dekxBTW5hQkg2WXUyR3QzQmR0VERiLXlGRVdF/view?usp=sharing"
-        },
-        {
-          name: "Google Code-in Blog",
-          url: "https://opensource.googleblog.com/2019/01/google-code-in-2018-winners.html"
         }
       ]
     },
     {
-      title: "Google Assistant Action",
+      title: "ASP.NET Core Identity & Authentication",
       subtitle:
-        "Developed a Google Assistant Action JavaScript Guru that is available on 2 Billion devices world wide.",
-      image: require("./assets/images/googleAssistantLogo.webp"),
-      imageAlt: "Google Assistant Action Logo",
+        "Mastered secure authentication, authorization, and role-based access using ASP.NET Core for scalable web apps.",
+      image: require("./assets/images/AuthenticationManagement.jpg"),
+      imageAlt: "ASP.NET Core Identity Logo",
       footerLink: [
-        {
-          name: "View Google Assistant Action",
-          url: "https://assistant.google.com/services/a/uid/000000100ee688ee?hl=en"
-        }
+        { name: "Certification", url: "" }
       ]
     },
-
     {
-      title: "PWA Web App Developer",
-      subtitle: "Completed Certifcation from SMIT for PWA Web App Development",
-      image: require("./assets/images/pwaLogo.webp"),
-      imageAlt: "PWA Logo",
+      title: "Project Management",
+      subtitle:
+        "Learned effective planning, execution, and delivery techniques for achieving project goals on time.",
+      image: require("./assets/images/Project-Management.jpg"),
+      imageAlt: "Project Management Logo",
       footerLink: [
-        {name: "Certification", url: ""},
-        {
-          name: "Final Project",
-          url: "https://pakistan-olx-1.firebaseapp.com/"
-        }
+        { name: "Certification", url: "" }
+      ]
+    },
+    {
+      title: "Problem Solving Tools & Techniques",
+      subtitle:
+        "Developed analytical thinking to identify root causes and craft efficient, data-driven solutions.",
+      image: require("./assets/images/Problem-Solving.jpg"),
+      imageAlt: "Problem Solving Tools and Techniques Logo",
+      footerLink: [
+        { name: "Certification", url: "" }
+      ]
+    },
+    {
+      title: "Leadership: Theory & Practice",
+      subtitle:
+        "Explored leadership principles to guide, motivate, and manage high-performing cross-functional teams.",
+      image: require("./assets/images/Leadership.jpg"),
+      imageAlt: "Leadership Logo",
+      footerLink: [
+        { name: "Certification", url: "" }
+      ]
+    },
+    {
+      title: "Managing Online Meetings",
+      subtitle:
+        "Learned to plan and conduct engaging virtual meetings for hybrid and remote work environments.",
+      image: require("./assets/images/Managing-Online.jpg"),
+      imageAlt: "Managing Online Meetings Logo",
+      footerLink: [
+        { name: "Certification", url: "" }
+      ]
+    },
+    {
+      title: "Course Planning",
+      subtitle:
+        "Gained expertise in designing structured learning programs with clear objectives and measurable outcomes.",
+      image: require("./assets/images/Course-planning.jpg"),
+      imageAlt: "Course Planning Logo",
+      footerLink: [
+        { name: "Certification", url: "" }
+      ]
+    },
+    {
+      title: "Best Employee of the Month",
+      subtitle:
+        "Awarded for outstanding performance, innovation, and dedication in IT operations and project success.",
+      image: require("./assets/images/appreciation-1.jpg"),
+      imageAlt: "Best Employee of the Month Logo",
+      footerLink: [
+        { name: "Certificate", url: "" }
       ]
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: true
 };
+
 
 // Blogs Section
 
@@ -312,16 +616,22 @@ const blogSection = {
   displayMediumBlogs: "true", // Set true to display fetched medium blogs instead of hardcoded ones
   blogs: [
     {
-      url: "https://blog.usejournal.com/create-a-google-assistant-action-and-win-a-google-t-shirt-and-cloud-credits-4a8d86d76eae",
-      title: "Win a Google Assistant Tshirt and $200 in Google Cloud Credits",
+      url: "#",
+      title: ".NET: Built for Security and Performance",
       description:
-        "Do you want to win $200 and Google Assistant Tshirt by creating a Google Assistant Action in less then 30 min?"
+        ".NET ensures robust security and high performance, making it ideal for critical applications like banking, e-commerce, and enterprise systems, protecting data while delivering fast, reliable user experiences."
     },
     {
-      url: "https://medium.com/@saadpasta/why-react-is-the-best-5a97563f423e",
-      title: "Why REACT is The Best?",
+      url: "#",
+      title: "Why React Leads in Front-End Development?",
       description:
-        "React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies."
+        "React Leads in Front-End Development by enabling fast, scalable, and interactive user interfaces, supported by a vast ecosystem and reusable components."
+    },
+     {
+      url: "#",
+      title: "Why .NET Core and React Are the Perfect Full-Stack Combo",
+      description:
+        ".NET Core ensures secure, high-performance backends, while React delivers dynamic, interactive frontends, together enabling robust, scalable full-stack applications."
     }
   ],
   display: true // Set false to hide this section, defaults to true
@@ -339,7 +649,7 @@ const talkSection = {
     {
       title: "Build Actions For Google Assistant",
       subtitle: "Codelab at GDG DevFest Karachi 2019",
-      slides_url: "https://bit.ly/saadpasta-slides",
+      slides_url: "#",
       event_url: "https://www.facebook.com/events/2339906106275053/"
     }
   ],
@@ -369,11 +679,11 @@ const resumeSection = {
 };
 
 const contactInfo = {
-  title: emoji("Contact Me ☎️"),
+  title: emoji("Get in Touch ☎️"),
   subtitle:
-    "Discuss a project or just want to say hi? My Inbox is open for all.",
-  number: "+92-0000000000",
-  email_address: "saadpasta70@gmail.com"
+    "I’m always open to discussing new projects, creative ideas, or opportunities to be part of your vision.",
+  number: "+971 545198340",
+  email_address: "yaseenvk1990@gmail.com"
 };
 
 // Twitter Section
