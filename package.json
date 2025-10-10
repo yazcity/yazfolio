@@ -1,4 +1,5 @@
 {
+  "homepage": "https://yazcodes.github.io/yazfolio",
   "name": "yazfolio",
   "version": "0.1.0",
   "private": true,
@@ -9,6 +10,7 @@
     "@testing-library/user-event": "^13.5.0",
     "colorthief": "^2.6.0",
     "framer-motion": "^12.23.22",
+    "gh-pages": "^6.3.0",
     "lottie-react": "^2.4.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
@@ -18,10 +20,13 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+
   },
   "eslintConfig": {
     "extends": [
