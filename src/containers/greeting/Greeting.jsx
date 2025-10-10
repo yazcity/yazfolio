@@ -10,6 +10,10 @@ import Button from "../../components/button/Button";
 import { illustration, greeting } from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
 
+import { FaFileDownload } from "react-icons/fa";
+
+
+
 function Greeting() {
   const { isDark } = useContext(StyleContext);
 
@@ -66,8 +70,20 @@ function Greeting() {
                   download="Resume.pdf"
                   className="download-link-button"
                 >
-                  <Button text="Download my resume" />
+                  <Button
+                    text={
+                      window.innerWidth <= 480 ? <FaFileDownload /> : "Download my resume"
+                    }
+                  />
                 </a>
+
+                // <a
+                //   href={require("./resume.pdf")}
+                //   download="Resume.pdf"
+                //   className="download-link-button"
+                // >
+                //   <Button text="Download my resume" />
+                // </a>
               )}
             </div>
           </div>
