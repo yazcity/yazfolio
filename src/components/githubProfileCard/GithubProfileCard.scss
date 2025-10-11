@@ -1,13 +1,15 @@
 @import "../../_globalColor";
 
 .profile-image {
+  display: block;
   border-radius: 50%;
   border: 0.5rem solid $githubProfileCardBorder;
-  margin-left: auto;
+  margin: 0 auto;
   width: 100%;
   max-width: 350px;
   height: auto;
-  max-height: 350px;
+  aspect-ratio: 1 / 1; // ✅ Keeps circular aspect ratio
+  object-fit: cover;   // ✅ Ensures image fits perfectly inside circle
   box-shadow: $lightBoxShadow 0 30px 30px -30px;
   transition: all 0.3s ease-out;
 }
@@ -61,7 +63,6 @@
 
 @media (max-width: 768px) {
   .row {
-    display: flex;
     flex-direction: column;
   }
 
@@ -75,9 +76,9 @@
   }
 
   .image-content-profile {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     order: 1;
+    text-align: center;
   }
 
   .desc-prof {
@@ -86,16 +87,14 @@
   }
 
   .profile-image {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
     max-width: 250px;
-    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    box-shadow: $lightBoxShadow 0 30px 30px -30px;
   }
 
   .profile-image:hover {
     box-shadow: $lightBoxShadow 0 50px 50px -50px;
-    transition: 0.3s ease-out;
   }
 
   .prof-title {
