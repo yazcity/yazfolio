@@ -1,0 +1,94 @@
+---
+title: "Why .NET and React Are a Great Full-Stack Combination"
+description: "A practical look at pairing an ASP.NET Core Web API with a React front end — how the pieces fit, how to structure the contract between them, and the pitfalls to avoid."
+date: "2026-10-26"
+tags: ["dotnet", "react", "web-api", "architecture"]
+keywords: [".NET and React", "ASP.NET Core Web API React", "full stack .NET developer", "React .NET architecture", "Senior .NET Developer"]
+cover: "/images/blog/dotnet-core-and-react-full-stack.webp"
+coverAlt: "Two clusters of glowing nodes connected by bright links"
+---
+
+Most of my career has been on the .NET side of the stack: APIs, business logic, SQL Server and Oracle. Over time, more of the interfaces I build have moved to React. Having worked on both sides, I've come to think the pairing is one of the most productive ways to build business software.
+
+Here's why — and how I structure it.
+
+## Each side does what it's best at
+
+**ASP.NET Core** is excellent at the things a back end must get right: authentication and authorization, validation, transactions, data access, background jobs and integration with other systems. It's strongly typed, fast, and mature.
+
+**React** is excellent at the things users notice: responsive, interactive interfaces built from reusable components. Its ecosystem — routing, forms, data fetching, UI libraries — is enormous.
+
+Put them together with a clean HTTP API in the middle and you get a clear separation: the server owns the rules and the data; the client owns the experience.
+
+## The API contract is the whole game
+
+The most important design decision is the shape of the API. A few rules I follow:
+
+### Return DTOs, not database entities
+
+```csharp
+public record TaskDto(int Id, string Title, string AssignedTo, DateOnly DueDate, string Status);
+
+[HttpGet]
+public async Task<IEnumerable<TaskDto>> GetMyTasks(CancellationToken ct) =>
+    await _db.Tasks
+        .Where(t => t.AssigneeId == User.GetUserId()) // GetUserId(): small ClaimsPrincipal extension
+        .Select(t => new TaskDto(t.Id, t.Title, t.Assignee.Name, t.DueDate, t.Status.ToString()))
+        .ToListAsync(ct);
+```
+
+DTOs keep internal columns private, avoid accidental over-fetching, and let the database evolve without breaking the front end.
+
+### Mirror the types on the client
+
+The same shape, in TypeScript:
+
+```ts
+export type TaskDto = {
+  id: number;
+  title: string;
+  assignedTo: string;
+  dueDate: string; // ISO date from the API
+  status: "Open" | "InProgress" | "Done";
+};
+```
+
+For larger APIs, generate these types from the OpenAPI document that ASP.NET Core produces, so the front end can't drift out of sync with the back end.
+
+### Use standard error responses
+
+ASP.NET Core supports RFC 7807 **ProblemDetails** for errors. If every endpoint returns errors in the same shape, the React side needs one error-handling path instead of dozens.
+
+## Authentication: keep tokens out of reach
+
+There are two common approaches:
+
+- **Same-site deployment with cookies.** Serve the React build and the API from the same domain, and use secure, `HttpOnly` cookies. JavaScript can't read them, which removes a whole class of token-theft problems.
+- **Separate domains with tokens.** If the API serves several clients (web, mobile), JWTs work well — but configure CORS narrowly and think carefully about where tokens are stored.
+
+For internal enterprise systems, I generally prefer the first: simpler, and safer by default.
+
+## One codebase or two?
+
+Both work:
+
+- **One repository** with the API and the React app side by side is easiest for a small team — one pull request can change both sides of a feature.
+- **Separate repositories** make sense when different teams own each side, or when several front ends share one API.
+
+Whichever you choose, deploy them so that the API version and the front end that expects it go out together.
+
+## Where it shines — and where to be careful
+
+The combination shines for dashboards, workflow systems and admin tools — exactly the kind of software organisations run on: lots of forms, lists, approvals and reports, with serious rules behind them.
+
+A few things to watch:
+
+- **Don't move business rules into React.** Validate on the client for convenience, but the server must always re-validate.
+- **Paginate on the server.** Sending 10,000 rows to the browser and filtering there is a common, avoidable mistake.
+- **Watch bundle size.** A React app can grow large quickly; split routes and lazy-load heavy screens.
+
+## The bottom line
+
+.NET gives you a secure, high-performance, strongly typed back end. React gives you a modern, component-driven front end with a huge ecosystem. Joined by a well-designed API, they let a small team build software that's pleasant to use *and* solid underneath.
+
+*Building something with .NET and React? [I'd love to hear about it](/contact).*

@@ -1,0 +1,99 @@
+---
+title: "What I Learned Migrating My Portfolio from React to Next.js"
+description: "Moving my portfolio from Create React App to the Next.js App Router cut the JavaScript, shrank images from ~14 MB to about half a megabyte, and finally made it visible to search engines. Here's what changed and why."
+date: "2026-11-02"
+tags: ["nextjs", "react", "performance", "seo"]
+keywords: ["migrate React to Next.js", "Create React App to Next.js", "Next.js App Router portfolio", "Next.js SEO", "Senior .NET Developer portfolio"]
+cover: "/images/blog/migrating-portfolio-react-to-nextjs.webp"
+coverAlt: "Abstract constellation of teal and violet nodes on a dark background"
+---
+
+My old portfolio did its job: it listed my experience, showed my projects and had a dark-mode toggle. It was a Create React App project, configured through a single `portfolio.jsx` file, deployed with `gh-pages`.
+
+But every time I opened it, I knew it wasn't representing me well. I build enterprise systems for a living — systems where performance, structure and maintainability matter. My own site should show the same care.
+
+So I rebuilt it with Next.js. These are the lessons that stood out.
+
+## 1. A client-only React app is almost invisible to search engines
+
+The old `index.html` had an empty `<div id="root">`, a page title of "Yazfolio" and the default meta description: *"Web site created using create-react-app"*. Everything else — my name, my experience, my projects — only existed after JavaScript ran.
+
+Google can render JavaScript, but it's slower and less reliable than reading HTML, and social networks (LinkedIn, WhatsApp, X) don't run it at all. When I shared the link, the preview had nothing useful in it.
+
+With the Next.js App Router, every page is **statically generated at build time**. The HTML already contains the content. On top of that, the Metadata API gives each page its own title, description and canonical URL:
+
+```tsx
+// app/projects/page.tsx
+export const metadata = pageMetadata({
+  title: "Projects",
+  description: "Case studies of enterprise .NET platforms I architected…",
+  path: "/projects",
+});
+```
+
+I also added things I never had before: a generated `sitemap.xml` and `robots.txt`, JSON-LD structured data (`Person` on the home page, `BlogPosting` on posts, `BreadcrumbList` on inner pages), and a 1200×630 social preview image generated with `next/og`.
+
+## 2. The bundle was heavier than it looked
+
+The production build of the old site shipped a single main JavaScript file of about **1.3 MB** (minified). Part of that was the app itself, but a lot of it was content baked into the bundle — including roughly half a megabyte of Lottie animation JSON, plus a two-second splash screen that made every visitor wait before seeing anything.
+
+In the new site:
+
+- Pages are **React Server Components** by default, so content renders on the server and ships as HTML, not JavaScript.
+- Only interactive pieces (theme toggle, menu, contact form, animations) are client components.
+- The splash screen is gone. The headline is visible on first paint.
+
+<Callout>
+**Lesson:** measure what you ship. A "simple" portfolio can quietly grow past a megabyte of JavaScript — and a loading screen is a symptom, not a feature.
+</Callout>
+
+## 3. Images were the biggest win
+
+The images my old site actually displayed added up to roughly **14 MB** — full-size PNG and JPG files straight from my design tools, served at whatever size they were saved.
+
+After converting them to WebP, resizing them to sensible maximums, and serving them through `next/image` (which creates responsive sizes and modern formats automatically), the same set is now about **550 KB**. That's not a tweak — it's a different category of page weight.
+
+## 4. Content belongs in typed data, not in components
+
+The old `portfolio.jsx` approach was actually a good idea: one file to edit. What it lacked was structure. It mixed content with UI concerns (emoji helpers, `require()` calls for images, display flags) and nothing stopped me from making a typo in a field name.
+
+Now each kind of content lives in its own TypeScript file — `profile.ts`, `experience.ts`, `projects.ts`, `skills.ts` — backed by shared types:
+
+```ts
+export type Experience = {
+  role: string;
+  company: string;
+  logo: string;
+  start: string;
+  end: string;
+  summary: string;
+  highlights: string[];
+};
+```
+
+If I forget a field or misspell one, the build fails before the site goes live. Coming from C#, this feels like home: the compiler checks my content the same way it checks my code.
+
+## 5. A 3D hero only works if it's optional
+
+I wanted the new home page to have an interactive 3D scene, built with React Three Fiber. But Three.js is large, and a beautiful animation is worthless if the page feels slow.
+
+So the scene follows strict rules:
+
+- It's loaded with `next/dynamic` and `ssr: false`, **after** the browser is idle — the text and buttons are already on screen.
+- Phones, low-power devices, data-saver mode and anyone with **reduced motion** turned on get a lightweight static version instead.
+- Rendering pauses when the hero scrolls out of view.
+
+This is the same thinking I apply at work: the core experience has to be fast and reliable for everyone; the extras are progressive enhancement.
+
+## 6. Accessibility is easier to build in than to bolt on
+
+Rebuilding gave me the chance to do things properly from the start: semantic landmarks and heading order, a skip link, visible focus states, full keyboard navigation, alt text, and a colour palette checked against WCAG AA in both light and dark mode (body text is above 16:1 in both themes).
+
+## What I'd tell anyone planning the same move
+
+1. **Start by extracting your content.** Once it's in clean, typed data files, the framework is almost a detail.
+2. **Measure before and after** — bundle size, image weight, Lighthouse scores. The numbers keep you honest.
+3. **Treat SEO as architecture**, not an afterthought: static HTML, metadata, sitemap, structured data.
+4. **Make the impressive parts optional.** Fast first, fancy second.
+
+The new site is faster, easier for me to update, and finally something I'm happy to put in front of a recruiter or client. If you're thinking about a similar migration — or need help with one — [get in touch](/contact).

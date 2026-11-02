@@ -1,0 +1,109 @@
+---
+title: ".NET for Enterprise Apps: Built for Security and Performance"
+description: "Why I keep choosing ASP.NET Core for systems that handle sensitive data and real workloads — the built-in security features, the performance story, and the habits that matter most in production."
+date: "2026-10-29"
+tags: ["dotnet", "aspnetcore", "security", "performance"]
+keywords: ["ASP.NET Core security", ".NET performance", "Senior .NET Developer", "ASP.NET Core Identity", "enterprise .NET applications"]
+cover: "/images/blog/dotnet-security-and-performance.webp"
+coverAlt: "Abstract shield-like lattice of glowing nodes"
+---
+
+Over the last decade I've built HR, payroll, finance, asset-management and university systems on .NET — software where a bug can mean someone isn't paid correctly or a student record leaks. When the stakes are that real, the platform you build on matters.
+
+Here's why .NET keeps earning that trust, and the practices I rely on to make the most of it.
+
+## Security that's on by default
+
+The best security features are the ones you don't have to remember to switch on. ASP.NET Core ships with a lot of them.
+
+### Authentication and authorization are first-class
+
+ASP.NET Core Identity handles password hashing, lockout, two-factor authentication and token generation out of the box. You don't write your own password storage — and you shouldn't.
+
+Authorization is declarative. Instead of scattering `if (user.IsAdmin)` checks through your code, you define policies once and apply them where needed:
+
+```csharp
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("HrManagers", policy =>
+        policy.RequireRole("HR").RequireClaim("department", "HR"));
+});
+
+[Authorize(Policy = "HrManagers")]
+public class AppraisalsController : Controller
+{
+    // Only HR managers reach any action in here.
+}
+```
+
+For systems with many departments and roles — exactly what university and corporate platforms look like — this keeps access rules readable and auditable.
+
+### Protection against common web attacks
+
+- **Cross-site request forgery:** MVC and Razor Pages validate anti-forgery tokens on form posts.
+- **Cross-site scripting:** Razor HTML-encodes output by default. You have to go out of your way to render raw HTML.
+- **Sensitive data:** the Data Protection API handles encryption keys for cookies and tokens, including key rotation.
+- **Transport:** HTTPS redirection and HSTS are one line each in the startup pipeline.
+
+### SQL injection is a solved problem — if you let it be
+
+Whether you use Entity Framework Core, Dapper or plain ADO.NET, parameterised queries are the default path. The rule I follow on every project is simple: **never build SQL by concatenating strings.**
+
+```csharp
+// Safe: the value is sent as a parameter, never as SQL text.
+var employee = await db.Employees
+    .Where(e => e.EmployeeNo == employeeNo)
+    .SingleOrDefaultAsync();
+```
+
+The same applies to stored procedures: pass values as `SqlParameter`s, not by formatting them into the command.
+
+## Performance you can feel
+
+### A fast runtime and web server
+
+Each .NET release has brought substantial runtime and JIT improvements, and ASP.NET Core's Kestrel server consistently ranks among the fastest mainstream web frameworks in public benchmarks. For most business applications, that means the framework is rarely the bottleneck.
+
+### Async all the way down
+
+Most enterprise endpoints spend their time waiting — on the database, a file share, another API. `async`/`await` lets the server handle other requests while it waits, instead of tying up a thread:
+
+```csharp
+[HttpGet("{id:int}")]
+public async Task<ActionResult<LeadDto>> Get(int id, CancellationToken ct)
+{
+    var lead = await _leads.FindAsync(id, ct);
+    return lead is null ? NotFound() : Ok(lead);
+}
+```
+
+Passing the `CancellationToken` through means that if a user closes the page, the database work can stop too.
+
+### The database is usually where the time goes
+
+In my experience, the biggest performance wins in line-of-business systems are almost never in C#. They're in SQL:
+
+- Look at the **execution plan** before guessing.
+- Add the **right indexes** for the queries you actually run.
+- Select only the columns you need.
+- For heavy reporting, a well-written **stored procedure** or view often beats loading data into the application and filtering it there.
+
+A lot of my day-to-day work has been exactly this: optimising SQL Server queries and stored procedures so the application stays fast as data grows.
+
+### Built-in caching
+
+`IMemoryCache`, distributed caching and output caching are all built in. Lookup data that changes rarely — departments, course lists, settings — shouldn't hit the database on every request.
+
+## Habits that matter more than any framework
+
+.NET gives you a strong foundation, but production systems stay secure and fast because of habits:
+
+1. **Keep the runtime current.** Moving legacy applications onto modern .NET brings security patches and performance improvements for free.
+2. **Least privilege everywhere** — in authorization policies and in database accounts.
+3. **Validate on the server**, even when the UI already validates.
+4. **Log and monitor.** You can't fix what you can't see.
+5. **Measure before optimising.** Profile, check the query plan, then change things.
+
+That combination — a platform that's secure by default and fast out of the box, plus disciplined engineering — is why I'm comfortable putting .NET behind systems that whole organisations depend on.
+
+*Planning a .NET system or modernising an old one? [Let's talk](/contact).*
