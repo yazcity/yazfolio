@@ -41,7 +41,7 @@ export default function ContactPage() {
           <ul className="flex flex-wrap gap-2 pt-2">
             {profile.socials.map((s) => (
               <li key={s.href}>
-                <a href={s.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 rounded-full border border-line px-3 py-1.5 text-sm transition hover:border-accent hover:text-accent">
+                <a href={s.href} target="_blank" rel="me noopener noreferrer" className="inline-flex items-center gap-1 rounded-full border border-line px-3 py-1.5 text-sm transition hover:border-accent hover:text-accent">
                   {s.label} <ArrowUpRight width={14} height={14} /><span className="sr-only">(opens in a new tab)</span>
                 </a>
               </li>

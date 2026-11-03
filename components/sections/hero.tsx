@@ -3,7 +3,7 @@ import { profile } from "@/content/profile";
 import { HeroVisual } from "../hero/hero-visual";
 import { HeroScroll } from "../scroll/hero-scroll";
 import { ButtonLink } from "../ui";
-import { ArrowRight, Download } from "../icons";
+import { ArrowRight, Download, GitHub, LinkedIn } from "../icons";
 
 export function Hero() {
   return (
@@ -53,7 +53,26 @@ export function Hero() {
             </a>
           </div>
 
-          <p className="rise rise-3 mt-10 text-sm text-muted">
+          <ul className="rise rise-3 mt-8 flex items-center gap-2" aria-label="Profiles">
+            {[
+              { label: "LinkedIn", href: profile.socials.find((s) => s.icon === "linkedin")?.href, Icon: LinkedIn },
+              { label: "GitHub", href: profile.socials.find((s) => s.icon === "github")?.href, Icon: GitHub },
+            ].map(({ label, href, Icon }) => (
+              <li key={label}>
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="me noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-line px-3.5 py-2 text-sm font-medium text-muted transition hover:border-accent hover:text-fg"
+                >
+                  <Icon width={16} height={16} /> {label}
+                  <span className="sr-only">(opens in a new tab)</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          <p className="rise rise-3 mt-6 text-sm text-muted">
             Recently: architecting{" "}
             <Link href="/projects/university-management-system" className="font-medium text-fg underline decoration-line-strong underline-offset-4 hover:decoration-accent">
               University Management System

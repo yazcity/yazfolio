@@ -8,7 +8,7 @@ import { profilePageSchema } from "@/lib/person-schema";
 import { pageMetadata } from "@/lib/seo";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { JsonLd, ButtonLink } from "@/components/ui";
-import { Download, Mail, MapPin, Phone } from "@/components/icons";
+import { Download, LinkedIn, Mail, MapPin, Phone } from "@/components/icons";
 
 const TITLE = "Ahammed Yaseen Resume / CV – Senior Full Stack .NET Developer";
 
@@ -16,7 +16,7 @@ export const metadata = {
   ...pageMetadata({
     title: TITLE,
     description:
-      "Resume (CV) of Ahammed Yaseen, Senior Full Stack .NET Developer in Sharjah, UAE: 12+ years of experience, skills, projects, certifications and education. Download the PDF.",
+      "Resume (CV) of Ahammed Yaseen, Senior Full Stack .NET Developer in Ajman, UAE: 12+ years of experience, skills, projects, certifications and education. Download the PDF.",
     path: "/resume",
     type: "profile",
   }),
@@ -40,6 +40,7 @@ export default function ResumePage() {
               <li className="flex items-center gap-2"><MapPin width={16} height={16} /> {profile.location}</li>
               <li className="flex items-center gap-2"><Mail width={16} height={16} /> <a className="hover:text-accent" href={`mailto:${profile.email}`}>{profile.email}</a></li>
               <li className="flex items-center gap-2"><Phone width={16} height={16} /> <a className="hover:text-accent" href={`tel:${profile.phone.replace(/\s/g, "")}`}>{profile.phone}</a></li>
+              <li className="flex items-center gap-2"><LinkedIn width={15} height={15} /> <a className="hover:text-accent" href={profile.socials[0].href} target="_blank" rel="me noopener noreferrer">linkedin.com/in/yazcity</a></li>
             </ul>
           </div>
           <ButtonLink href={profile.resumePath} download>

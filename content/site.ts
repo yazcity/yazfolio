@@ -9,7 +9,7 @@ export const site = {
   title: "Ahammed Yaseen – Senior .NET Developer | Portfolio & Resume",
   // ~155 characters.
   description:
-    "Portfolio, resume & CV of Ahammed Yaseen — Senior Full Stack .NET Developer in Sharjah, UAE with 12+ years in ASP.NET Core, React, Angular, .NET MAUI & SQL Server.",
+    "Portfolio, resume & CV of Ahammed Yaseen — Senior Full Stack .NET Developer in Ajman, UAE with 12+ years in ASP.NET Core, React, Angular, .NET MAUI & SQL Server.",
   keywords: [
     "Ahammed Yaseen",
     "Ahammed Yaseen portfolio",
@@ -19,7 +19,7 @@ export const site = {
     "yazcity",
     "Senior .NET Developer",
     "Senior .NET Developer UAE",
-    "Full Stack .NET Developer Sharjah",
+    "Full Stack .NET Developer Ajman",
     "ASP.NET Core developer",
     ".NET MAUI developer",
   ],

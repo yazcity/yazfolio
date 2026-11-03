@@ -14,7 +14,7 @@ export const profile: Profile = {
     "I specialise in .NET (6/8/10), ASP.NET Core, ASP.NET MVC, Web API and SQL Server, with Razor, React and Angular on the front end and .NET MAUI and Xamarin for mobile — plus RESTful APIs, authentication systems, CI/CD pipelines, containerised deployments and secure development aligned with OWASP.",
     "Today I lead development of enterprise platforms at City University Ajman — from gathering requirements with academic departments to architecture, delivery and mentoring junior developers.",
   ],
-  location: "Sharjah, UAE",
+  location: "Ajman, UAE",
   email: "yaseenvk1990@gmail.com",
   phone: "+971 54 5198 340",
   avatar: {
@@ -33,7 +33,7 @@ export const profile: Profile = {
     "Delivered multiple enterprise systems used across academic departments and administration.",
   ],
   socials: [
-    { label: "LinkedIn", href: "https://www.linkedin.com/in/yazcity", icon: "linkedin" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/yazcity/", icon: "linkedin" },
     { label: "GitHub", href: "https://github.com/yazcity", icon: "github" },
     { label: "GitLab", href: "https://gitlab.com/yazcity", icon: "gitlab" },
     { label: "Medium", href: "https://medium.com/@yazcity", icon: "medium" },

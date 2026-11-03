@@ -32,7 +32,7 @@ export function SiteFooter() {
           <ul className="mt-3 space-y-2">
             {profile.socials.map((s) => (
               <li key={s.href}>
-                <a href={s.href} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-1 text-muted transition hover:text-fg">
+                <a href={s.href} target="_blank" rel="me noopener noreferrer" className="group inline-flex items-center gap-1 text-muted transition hover:text-fg">
                   {s.label}
                   <ArrowUpRight width={14} height={14} className="transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                   <span className="sr-only">(opens in a new tab)</span>

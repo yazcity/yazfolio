@@ -23,7 +23,7 @@ export function personSchema() {
     image: absoluteUrl(profile.avatar.src),
     email: `mailto:${profile.email}`,
     telephone: profile.phone.replace(/\s/g, ""),
-    address: { "@type": "PostalAddress", addressLocality: "Sharjah", addressCountry: "AE" },
+    address: { "@type": "PostalAddress", addressLocality: "Ajman", addressCountry: "AE" },
     worksFor: { "@type": "Organization", name: current.company },
     hasOccupation: {
       "@type": "Occupation",
