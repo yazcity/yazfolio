@@ -6,16 +6,20 @@ export const site = {
   // Other names people may search for (used in structured data).
   alternateNames: ["Ahammed Yaseen Vadakkayil", "Yaseen Ahammed", "Yaseen"],
   // ~60 characters: name first, then what people search for.
-  title: "Ahammed Yaseen – Senior .NET Developer | Portfolio & Resume",
+  title: "Ahammed Yaseen – Full Stack .NET Developer | Portfolio & CV",
   // ~155 characters.
   description:
-    "Portfolio, resume & CV of Ahammed Yaseen — Senior Full Stack .NET Developer in Ajman, UAE with 12+ years in ASP.NET Core, React, Angular, .NET MAUI & SQL Server.",
+    "Ahammed Yaseen (Yaseen) is a Senior Full Stack .NET Developer in Ajman, UAE with 12+ years in ASP.NET Core, React, Angular, .NET MAUI & SQL Server. Portfolio, resume & CV.",
   keywords: [
     "Ahammed Yaseen",
     "Ahammed Yaseen portfolio",
     "Ahammed Yaseen resume",
     "Ahammed Yaseen CV",
     "Ahammed Yaseen Vadakkayil",
+    "Full Stack Developer Ahammed Yaseen",
+    "Developer Yaseen",
+    "Full Stack Developer Yaseen",
+    "Who is Ahammed Yaseen",
     "yazcity",
     "Senior .NET Developer",
     "Senior .NET Developer UAE",

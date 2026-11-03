@@ -4,7 +4,8 @@ import { education, certifications } from "@/content/education";
 import { pageMetadata } from "@/lib/seo";
 import { PageHeader } from "@/components/breadcrumbs";
 import { Reveal } from "@/components/reveal";
-import { ButtonLink, SectionHeading } from "@/components/ui";
+import { ButtonLink, JsonLd, SectionHeading } from "@/components/ui";
+import { faq } from "@/content/faq";
 import { ArrowUpRight, Check, Download, Mail, MapPin, Phone } from "@/components/icons";
 import { competencies, tools } from "@/content/skills";
 import { CountUp } from "@/components/scroll/count-up";
@@ -12,18 +13,24 @@ import { Skills } from "@/components/sections/skills";
 import { ExperienceTimeline } from "@/components/sections/experience-timeline";
 import { ContactCta } from "@/components/sections/contact-cta";
 
-export const metadata = pageMetadata({
-  title: "About Me – Senior .NET Developer, UAE",
-  description: `About ${profile.name}, a ${profile.role} in ${profile.location} with ${profile.yearsOfExperience} years building enterprise web, mobile and desktop applications with ASP.NET Core, MVC, React, Angular, .NET MAUI and SQL Server.`,
-  path: "/about",
-});
+const TITLE = "Who is Ahammed Yaseen? Full Stack .NET Developer, UAE";
+
+export const metadata = {
+  ...pageMetadata({
+    title: TITLE,
+    description: `Who is ${profile.name}? Developer Yaseen is a ${profile.role} in ${profile.location} with ${profile.yearsOfExperience} years building enterprise web, mobile and desktop applications with ASP.NET Core, MVC, React, Angular, .NET MAUI and SQL Server.`,
+    path: "/about",
+  }),
+  // Already contains the name, so skip the " · Ahammed Yaseen" suffix.
+  title: { absolute: TITLE },
+};
 
 export default function AboutPage() {
   return (
     <>
       <PageHeader
         crumbs={[{ name: "About", path: "/about" }]}
-        eyebrow="About me"
+        eyebrow="About Ahammed Yaseen"
         title="A .NET engineer who cares about the whole system."
         intro={profile.valueStatement}
       />
@@ -143,6 +150,25 @@ export default function AboutPage() {
             </Reveal>
           ))}
         </ul>
+      </section>
+
+      <section aria-labelledby="faq-title" className="container-page py-24">
+        <SectionHeading id="faq-title" eyebrow="FAQ" title="Who is Ahammed Yaseen?" />
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+          }}
+        />
+        <dl className="mt-12 grid gap-4 md:grid-cols-2">
+          {faq.map((f, i) => (
+            <Reveal key={f.q} delay={(i % 2) * 0.08} className="card p-6">
+              <dt className="text-lg font-semibold">{f.q}</dt>
+              <dd className="mt-2 text-muted">{f.a}</dd>
+            </Reveal>
+          ))}
+        </dl>
       </section>
 
       <ContactCta />
