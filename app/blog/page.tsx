@@ -6,7 +6,7 @@ import { PageHeader } from "@/components/breadcrumbs";
 import { Reveal } from "@/components/reveal";
 
 export const metadata = pageMetadata({
-  title: "Blog",
+  title: "Blog – .NET, React & Enterprise Software Notes",
   description:
     "Notes on .NET, React, SQL Server and building enterprise software — lessons from real projects by Ahammed Yaseen.",
   path: "/blog",

@@ -8,7 +8,7 @@ import { SplitReveal } from "@/components/scroll/split-reveal";
 import { ContactCta } from "@/components/sections/contact-cta";
 
 export const metadata = pageMetadata({
-  title: "Projects",
+  title: "Projects & Case Studies – .NET, React, Angular",
   description:
     "Case studies of enterprise .NET systems by Ahammed Yaseen — university platforms (UMS, TIPAM, LMS, TMS, .NET MAUI mobile app), Dubai Municipality permit and inspection systems, e-commerce, ERP and hospital management.",
   path: "/projects",

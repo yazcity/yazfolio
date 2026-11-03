@@ -5,7 +5,7 @@ import { ContactForm } from "@/components/contact-form";
 import { ArrowUpRight, Download, Mail, MapPin, Phone } from "@/components/icons";
 
 export const metadata = pageMetadata({
-  title: "Contact",
+  title: "Contact – Hire a Senior .NET Developer in UAE",
   description: `Get in touch with ${profile.name}, ${profile.role} in the UAE — for senior .NET roles, freelance projects or consulting.`,
   path: "/contact",
 });

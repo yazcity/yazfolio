@@ -13,7 +13,7 @@ import { ExperienceTimeline } from "@/components/sections/experience-timeline";
 import { ContactCta } from "@/components/sections/contact-cta";
 
 export const metadata = pageMetadata({
-  title: "About",
+  title: "About Me – Senior .NET Developer, Sharjah UAE",
   description: `About ${profile.name}, a ${profile.role} in ${profile.location} with ${profile.yearsOfExperience} years building enterprise web, mobile and desktop applications with ASP.NET Core, MVC, React, Angular, .NET MAUI and SQL Server.`,
   path: "/about",
 });
