@@ -32,7 +32,13 @@ export const metadata: Metadata = {
     images: [{ url: "/og.png", width: 1200, height: 630, alt: site.title }],
   },
   twitter: { card: "summary_large_image", title: site.title, description: site.description, images: ["/og.png"] },
-  icons: { icon: "/icon.svg", apple: "/apple-icon.png" },
+  icons: {
+    icon: [
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/apple-icon.png",
+  },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large" } },
   // TODO: after verifying in Google Search Console, paste the token here (or use DNS verification).
   // verification: { google: "your-token" },
