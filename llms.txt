@@ -1,0 +1,108 @@
+# Ahammed Yaseen
+
+> Ahammed Yaseen (Yaseen) is a Senior Full Stack .NET Developer in Ajman, UAE with 12+ years in ASP.NET Core, React, Angular, .NET MAUI & SQL Server. Portfolio, resume & CV.
+
+Ahammed Yaseen (also known as Ahammed Yaseen Vadakkayil, Yaseen Ahammed, Yaseen) is a Senior Full Stack .NET Developer based in Ajman, UAE. Open to senior .NET roles & freelance projects.
+
+I'm a Senior Full Stack .NET Developer with 12+ years of experience designing and delivering scalable enterprise applications across government, education and enterprise domains in the UAE and India.
+
+I specialise in .NET (6/8/10), ASP.NET Core, ASP.NET MVC, Web API and SQL Server, with Razor, React and Angular on the front end and .NET MAUI and Xamarin for mobile — plus RESTful APIs, authentication systems, CI/CD pipelines, containerised deployments and secure development aligned with OWASP.
+
+Today I lead development of enterprise platforms at City University Ajman — from gathering requirements with academic departments to architecture, delivery and mentoring junior developers.
+
+## Contact
+
+- Website: https://yazcity.com
+- Email: yaseenvk1990@gmail.com
+- Location: Ajman, UAE
+- LinkedIn: https://www.linkedin.com/in/yazcity/
+- GitHub: https://github.com/yazcity
+- GitLab: https://gitlab.com/yazcity
+- Medium: https://medium.com/@yazcity
+- Stack Overflow: https://stackoverflow.com/users/31650770
+- Resume (PDF): https://yazcity.com/Ahammed-Yaseen-Resume.pdf
+
+## Experience
+
+- Senior Software Engineer, City University Ajman (Ajman, UAE), Sep 2020 – Present: Leading development of complex software solutions, including the University Management System (UMS), Lead Management, Task Management, Tactical Operational Plans and the university mobile app.
+- Senior Application Web Developer, Ali Mousa Holding (Sharjah, UAE), Sep 2019 – Sep 2020: Managed IT operations and enterprise applications for 12 subsidiaries and 400+ users across the UAE, in real estate, construction and manufacturing.
+- .NET Developer, Canada Hitech (Ajman, UAE), Jan 2018 – Jun 2019: Developed specialised software for the Dubai Government, including Dubai Municipality's inspection and advertisement-permit systems, plus an e-commerce platform.
+- .NET Developer, Woduru InfoTech (Kerala, India), Mar 2016 – Jun 2018: Responsible for full-cycle development — analysis, coding and debugging — of the CAMPUSKEY and PULSE projects.
+- Software Engineer, AIN Technologies (Kerala, India), Aug 2013 – Sep 2015: Designed and tested ASP.NET web and Windows applications (ACOMS and SYSBIZZ).
+
+## Skills
+
+- Back-end & APIs: C#, .NET 10 / 8 / 6, ASP.NET Core, ASP.NET MVC, Web API, Entity Framework Core, ADO.NET, LINQ, Microservices
+- Front-end: Razor, React, Angular, Next.js, TypeScript, JavaScript, HTML5, CSS3, Bootstrap, jQuery & AJAX
+- Mobile & Desktop: .NET MAUI, Xamarin, MVVM, WPF (XAML), Windows Forms
+- Data & Reporting: SQL Server, Oracle (SQL, PL/SQL), Oracle APEX, MongoDB, SQLite, SSRS, Power BI, RDLC
+- Cloud & DevOps: Azure, Docker, Git, GitHub, GitHub Actions (CI/CD), TFS
+- Security & Architecture: JWT, OAuth 2.0, RBAC, OWASP Top 10, Clean Architecture, SOLID, Repository & Unit of Work, Dependency Injection
+
+## Key achievements
+
+- Annual performance appraisal ratings above 97% for five consecutive years, with a highest score of 98.5%.
+- Best Employee of the Month (March 2024) at City University Ajman for outstanding performance and ownership.
+- Delivered multiple enterprise systems used across academic departments and administration.
+
+## Education & certifications
+
+- B.E. in Computer Science and Engineering, Anna University (Jun 2008 – Mar 2012)
+- Higher Secondary — Biology Science, Government Higher Secondary School (Jun 2005 – Mar 2007)
+- Microsoft Azure Fundamentals (AZ-900) (Microsoft · LinkedIn Learning)
+- ASP.NET Core Identity & Authentication (Specialist certification)
+- Leadership: Theory & Practice (QASPIR Professional Development)
+- Project Management: Effective Planning & Execution (QASPIR)
+- Oracle Database 11g (Oracle)
+- CCNA (Routing & Switching) (Cisco)
+- Problem Solving Tools & Techniques
+- Best Employee of the Month (City University Ajman)
+
+## Frequently asked
+
+### Who is Ahammed Yaseen?
+
+Ahammed Yaseen (Yaseen) is a Senior Full Stack .NET Developer based in Ajman, UAE, with 12+ years of experience building enterprise web, mobile and desktop applications. He is a Senior Software Engineer at City University Ajman and the developer behind yazcity.com.
+
+### What does Yaseen do as a full stack developer?
+
+Yaseen designs and builds complete systems end to end: ASP.NET Core and MVC back ends, Web APIs, React, Angular and Razor front ends, .NET MAUI and Xamarin mobile apps, and SQL Server databases, deployed on Azure.
+
+### Is Ahammed Yaseen a .NET developer?
+
+Yes. Ahammed Yaseen is a Senior .NET developer working with C#, ASP.NET Core, ASP.NET MVC, Entity Framework, .NET MAUI and Azure, and has delivered university platforms, Dubai Municipality permit and inspection systems, ERP and e-commerce applications.
+
+### Where is developer Ahammed Yaseen based?
+
+Ahammed Yaseen lives in Ajman, UAE and has worked in the UAE for 8+ years, after earlier development roles in India.
+
+### How can I hire or contact Ahammed Yaseen?
+
+Email yaseenvk1990@gmail.com, connect on LinkedIn (linkedin.com/in/yazcity), or use the contact form at yazcity.com/contact. He is open to senior .NET roles and freelance full stack projects.
+
+## Pages
+
+- [About](https://yazcity.com/about/): Who Ahammed Yaseen is
+- [Resume / CV](https://yazcity.com/resume/): Full résumé as a web page
+- [Projects](https://yazcity.com/projects/): Case studies of enterprise systems
+- [Contact](https://yazcity.com/contact/)
+
+## Projects
+
+- [University Management System](https://yazcity.com/projects/university-management-system/): City University Ajman, 2020 – Present
+- [Lead Management System](https://yazcity.com/projects/lead-management-system/): City University Ajman, 2020 – Present
+- [University Mobile Application](https://yazcity.com/projects/university-mobile-app/): City University Ajman, 2020 – Present
+- [Advertisement Permit Management System](https://yazcity.com/projects/advertisement-permit-system/): Dubai Municipality · Canada Hitech, 2018 – 2019
+- [Task Management System](https://yazcity.com/projects/task-management-system/): City University Ajman, 2020 – Present
+- [Inspection System](https://yazcity.com/projects/inspection-system/): Dubai Municipality · Canada Hitech, 2018 – 2019
+- [E-Commerce Application](https://yazcity.com/projects/e-commerce-application/): Canada Hitech, 2018 – 2019
+- [TIPAM — Academic Management Platform](https://yazcity.com/projects/tipam/): City University Ajman, 2020 – Present
+- [SYSBIZZ ERP](https://yazcity.com/projects/sysbizz-erp/): AIN Technologies, 2013 – 2015
+- [ACOMS — Automatic Company Management System](https://yazcity.com/projects/acoms/): AIN Technologies, 2013 – 2015
+- [Hospital Patient Management System](https://yazcity.com/projects/hospital-patient-management/): Earlier project · India, 2013 – 2018
+
+## Blog
+
+- [What I Learned Migrating My Portfolio from React to Next.js](https://yazcity.com/blog/migrating-portfolio-react-to-nextjs/)
+- [.NET for Enterprise Apps: Built for Security and Performance](https://yazcity.com/blog/dotnet-security-and-performance/)
+- [Why .NET and React Are a Great Full-Stack Combination](https://yazcity.com/blog/dotnet-core-and-react-full-stack/)
